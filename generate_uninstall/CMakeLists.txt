@@ -46,7 +46,7 @@ if (WIN32)
    ")
    install (FILES "${CMAKE_CURRENT_BINARY_DIR}/${UNINSTALL_PROG}" DESTINATION "${UNINSTALL_PROG_DIR}" PERMISSIONS ${UNINSTALL_PERMISSIONS})
 
-   add_custom_target (uninstall
+   add_custom_target (mongocxx_uninstall
       COMMAND call "${CMAKE_CURRENT_BINARY_DIR}/${UNINSTALL_PROG}"
    )
 else ()
@@ -71,7 +71,7 @@ else ()
    ")
    install (FILES "${CMAKE_CURRENT_BINARY_DIR}/${UNINSTALL_PROG}" DESTINATION "${UNINSTALL_PROG_DIR}" PERMISSIONS ${UNINSTALL_PERMISSIONS})
 
-   add_custom_target (uninstall
+   add_custom_target (mongocxx_uninstall
       COMMAND sh "${CMAKE_CURRENT_BINARY_DIR}/${UNINSTALL_PROG}"
    )
 endif ()
